@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Ростелеком. Аварии.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <div class="phone-frame">
+
+        <header class="header">
+            <div class="logo-container">
+                <img src="files/Logo.png">
+            </div>
+            <div class="header-right">
+                <button class="header-search-btn" id="globalSearchBtn">
+                    <span class="search-text-header">Поиск</span>
+                    <img src="files/arrow-come.svg">
+                </button>
+            </div>
+        </header>
+
+        
+        <div class="tabs-container main-tabs">
+            <button class="tab-button active" data-tab="tab1">Статус</button>
+            <button class="tab-button" data-tab="tab2">Период</button>
+        </div>
+
+        <main class="content" id="mainContent">
+            <div id="tab1" class="tab-content active-tab">
+                <div class="inner-tabs-container section1-tabs">
+                    <button class="inner-tab-button active" data-section="1" data-inner-tab="all-cards">Все</button>
+                    <button class="inner-tab-button" data-section="1" data-inner-tab="open-cards">Текущие</button>
+                    <button class="inner-tab-button" data-section="1" data-inner-tab="closed-cards">Закрытые</button>
+                </div>
+                <div id="all-cards" class="inner-tab-content active-inner-tab" data-section="1">
+                    <div class="cards-container" id="allCardsContainer"></div>
+                </div>
+                <div id="open-cards" class="inner-tab-content" data-section="1">
+                    <div class="cards-container" id="openCardsContainer"></div>
+                </div>
+                <div id="closed-cards" class="inner-tab-content" data-section="1">
+                    <div class="cards-container" id="closedCardsContainer"></div>
+                </div>
+            </div>
+
+            <div id="tab2" class="tab-content">
+                <div class="inner-tabs-container section2-tabs">
+                    <button class="inner-tab-button active" data-section="2" data-inner-tab="today-cards">Сегодня</button>
+                    <button class="inner-tab-button" data-section="2" data-inner-tab="week-cards">Неделя</button>
+                    <button class="inner-tab-button" data-section="2" data-inner-tab="month-cards">Месяц</button>
+                </div>
+                <div id="today-cards" class="inner-tab-content active-inner-tab" data-section="2">
+                    <div class="cards-container" id="todayCardsContainer"></div>
+                </div>
+                <div id="week-cards" class="inner-tab-content" data-section="2">
+                    <div class="cards-container" id="weekCardsContainer"></div>
+                </div>
+                <div id="month-cards" class="inner-tab-content" data-section="2">
+                    <div class="cards-container" id="monthCardsContainer">
+                    </div>
+                </div>
+  
+            </div>
+        </main>
+    </div>
+
+    <template id="card-template">
+        <div class="card" data-card-id="" data-status="">
+            <div class="card-header">
+                <h3 class="card-title"></h3>
+            </div>
+            <div class="card-date">
+                <span class="date-label">Дата:</span>
+                <span class="date-value"></span>
+            </div>
+            <div class="card-characteristics"></div>
+            <div class="card-actions"></div>
+        </div>
+    </template>
+
+    <script src="cards.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

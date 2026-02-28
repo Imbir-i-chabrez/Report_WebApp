@@ -1,0 +1,162 @@
+.search-page {
+    max-width: 390px;
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Заголовок страницы поиска */
+.search-header {
+    display: flex;
+    height: 56px;
+    align-items: center;
+    padding: 16px;
+    gap: 12px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.back-button {
+    width: 28px;
+    height: 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a2639;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+    margin-top: 10px;
+}
+
+/*.back-button:active {
+    background: #e0e4ec;
+    transform: scale(0.95);
+}*/
+
+.search-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a2639;
+    margin: 0;
+}
+
+/* Основной контейнер контента */
+.search-page-container {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Обертка для поля поиска */
+.search-page-input-wrapper {
+    display: flex;
+    align-items: center;
+    height: 42px;
+    background-color: transparent;
+    border-radius: 6px;
+    padding: 0 16px;
+    border: 1px solid #F95F0C;
+    transition: all 0.2s ease;
+}
+
+.search-page-input-wrapper:focus-within {
+    border: 1px solid #F95F0C;
+    box-shadow: 0 0 0 5px rgba(253, 89, 1, 0.1);
+    background-color: transparent;
+}
+
+/*.search-page-icon {
+    color: #8a99ae;
+    font-size: 18px;
+    margin-right: 8px;
+}*/
+
+.search-page-input {
+    flex: 1;
+    height: 52px;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    color: #1B1827;
+    outline: none;
+    padding: 0 4px;
+}
+
+/*.search-page-input::placeholder {
+    color: #9aa8bb;
+    font-size: 15px;
+}*/
+
+.search-page-clear {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #4d81ce;
+    border: none;
+    color: rgb(129, 65, 65);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    margin-left: 4px;
+    flex-shrink: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/*.search-page-clear.visible {
+    opacity: 1;
+}*/
+
+/*.search-page-clear:active {
+    transform: scale(0.9);
+    background-color: #8a99ae;
+}*/
+
+/* Информация о результатах поиска */
+/*.search-page-results-info {
+    font-size: 14px;
+    color: #6b7a8f;
+    margin: 8px 0 4px 4px;
+    padding: 4px 0;
+}*/
+
+/* Контейнер результатов */
+.search-results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    margin-top: 16px;
+}
+
+/* Сообщение об отсутствии результатов */
+.no-results {
+    text-align: top;
+    color: #9aa8bb;
+    padding: 0 20px;
+    font-size: 16px;
+}
+
+
+
+
+

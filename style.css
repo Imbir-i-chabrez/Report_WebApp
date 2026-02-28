@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #f5f7fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.phone-frame {
+    max-width: 390px;
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.header {
+    width: 100%;
+    height: 56px;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px 0 16px;
+}
+.logo-container {
+    display: flex;
+    align-items: left;
+    gap: 8px;
+    width: 137px;
+    height: 48px;
+}
+.header-search-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    padding: 8px 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+    margin-top: 10px;
+}
+.search-icon-header {
+    font-size: 28px;
+    color: #1B1827;
+}
+.search-text-header {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1B1827;
+}
+
+/*Внешние табы*/
+.main-tabs {
+    margin-top: 10px;
+    height: 36px;
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    flex-shrink: 0;
+    padding: 0 16px;
+    gap: 12px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);   
+}
+.tab-button {
+    flex: 1;
+    height: 28px;
+    background-color: transparent;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1B1827;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+.tab-button.active {
+    background-color: transparent;
+    color: #9015DC;
+    text-decoration: underline;
+}
+
+/*Внутренние табы*/
+.inner-tabs-container {
+    height: 32px;
+    border-radius: 16px;
+    display: flex;
+    width: 100%;
+    background-color: #d5d5d5;
+    flex-shrink: 0;
+    padding: 0px 0 8px 0;
+    gap: 8px;
+    margin-top: -4px;
+    margin-bottom: 8px;
+}
+.inner-tab-button {
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    flex: 1;
+    height: 28px;
+    background-color: transparent;
+    border: none;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1B1827;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+.inner-tab-button.active {
+    background-color: #F95F0C;
+    font-weight: 500;
+    color: white;
+}
+
+/* Карточки */
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+.card, .result-card {
+    background: white;
+    border-radius: 10px;
+    padding: 16px;
+    transition: all 0.2s ease;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.card[data-status="open"], .result-card[data-status="open"] {
+    border: 1.5px solid #FF8E99;
+    box-shadow: 0 2px 4px #dc5c69;
+}
+.card[data-status="closed"], .result-card[data-status="closed"] {
+    border: 1.5px solid #93F3B5;
+    box-shadow: 0 3px 5px #82dcaf;
+}
+.card-header, .result-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+}
+.card-title, .result-card-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1B1827;
+    margin: 0;
+}
+.card-date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 0 6px 0;
+    border-bottom: 2px solid #949494;
+    margin-bottom: 4px;
+    margin-top: -12px;
+    font-size: 16px;
+}
+.card-date .date-label {
+    color: #1B1827;
+    font-weight: 600;
+}
+.card-date .date-value {
+    color: #565555;
+    font-weight: 600;
+}
+.card-characteristics, .result-card-chars {
+    margin-top: -8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px 0;
+    background:#e0dfdf4a;
+    border-radius: 10px;
+}
+.characteristic-item, .result-card-char-item {
+    display: flex;
+    flex-direction: column;
+    /*gap: 4px;*/
+    padding: 4px 12px;
+    font-size: 12px;
+    width: 100%;
+}
+.characteristic-name, .result-card-char-name {
+    color: #1B1827;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+.characteristic-value, .result-card-char-value {
+    color: #565555;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    white-space: normal; 
+    width: 100%;
+}
+.characteristic-value-long, .result-card-char-value-long {
+    max-height: none; 
+    overflow: visible; 
+}
+.card-actions, .result-card-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex;
+    border-top: 2px solid #949494; 
+    padding-top: 12px;
+}
+.card-btn, .result-card-btn {
+    padding: 16px 40px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:16px;
+    min-width: 120px;
+    height: 28px;
+}
+.btn-delete, .btn-delete-result { 
+    margin-right: auto;
+    background-color: #ed7d88;
+    color: #1B1827;
+    border: 1px solid #ffdbdb;
+}
+.btn-status, .btn-status-result {
+    margin-left: auto;
+    background-color: #7cabf2;
+    color: #1B1827;
+    border: 1px solid #d1e4fa;
+}
+
+
+/* Основная область*/
+.content {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: #ffffff;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd0da #f2f4f8;
+}
+.tab-content {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+.tab-content.active-tab {
+    display: flex;
+}
+.inner-tab-content {
+    display: none;
+}
+.inner-tab-content.active-inner-tab {
+    display: block;
+}
+
+

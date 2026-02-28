@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Поиск</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <div class="search-page">
+        <div class="search-header">
+            <button class="back-button" id="backButton">
+                <img src="files/arrow-back.svg" alt="Clean">
+            </button>
+        </div>
+        
+        <div class="search-page-container">
+            <div class="search-page-input-wrapper">
+                <input type="text" class="search-page-input" placeholder="Поиск..." id="globalSearchInput">
+                <button class="search-page-clear" id="globalSearchClear">
+                    <img src="files/clear.svg">
+                </button>
+            </div>
+            <div class="search-results-container" id="searchResults"></div>
+        </div>
+    </div>
+
+    <script src="cards.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
